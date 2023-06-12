@@ -28,7 +28,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img src={HomePageText} alt="home-page-text" />
               </div>
             </div>
-            <p>
+            <p className="mt-8 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
               gravida scelerisque turpis, in ornare arcu interdum sed.
               Suspendisse ullamcorper dignissim lectus, eget tristique leo
@@ -37,7 +37,7 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
 
           {/* Actions */}
-          <div>
+          <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
