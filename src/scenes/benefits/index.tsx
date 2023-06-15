@@ -47,7 +47,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Header */}
-        <div className="md:my-5 md:w-3/5">
+        <motion.div
+          className="md:my-5 md:w-3/5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <HText>MORE THAN JUST A GYM.</HText>
           <p className="my-5 text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -55,7 +65,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             tincidunt tempor. Vestibulum consectetur urna sed mi venenatis,
             tempor mattis sapien aliquam.
           </p>
-        </div>
+        </motion.div>
 
         {/* Benefits */}
         <motion.div
