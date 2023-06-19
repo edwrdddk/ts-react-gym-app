@@ -86,6 +86,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                     "Max length is 100 char."}
                 </p>
               )}
+
               <input
                 className={inputStyles}
                 type="text"
@@ -97,8 +98,28 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               />
               {errors.email && (
                 <p className="mt-1 text-primary-500">
-                  {errors.email.type === "required" && "This field is required."}
+                  {errors.email.type === "required" &&
+                    "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
+                </p>
+              )}
+
+              <textarea
+                className={inputStyles}
+                placeholder="MESSAGE"
+                rows={4}
+                cols={50}
+                {...register("message", {
+                  required: true,
+                  maxLength: 2000,
+                })}
+              />
+              {errors.message && (
+                <p className="mt-1 text-primary-500">
+                  {errors.message.type === "required" &&
+                    "This field is required."}
+                  {errors.message.type === "maxLength" &&
+                    "Max length is 2000 char."}
                 </p>
               )}
             </form>
