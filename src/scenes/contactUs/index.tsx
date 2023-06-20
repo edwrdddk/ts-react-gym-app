@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
+  const inputStyles = `mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   const {
     register,
@@ -68,7 +68,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
-              action="https://formsubmit.co/edlollipopdidyk@gmail.com"
+              action="https://formsubmit.co/9d6fe9f45feeea66d3b1bc39721cd167"
             >
               <input
                 className={inputStyles}
